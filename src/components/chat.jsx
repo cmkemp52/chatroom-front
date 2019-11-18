@@ -46,7 +46,7 @@ class Chatroom extends Component {
           };
         });
       }
-    }, 1000);
+    }, 300);
   };
 
   async chooseRoom() {
