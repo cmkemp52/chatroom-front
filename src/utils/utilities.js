@@ -2,13 +2,13 @@ const axios = require("axios");
 
 export async function getChat(chatName, current) {
   const response = await axios.get(
-    `http://mayloop.com:7887/chatroom/${chatName}/${current}`
+    `https://chatapi.mayloop.com/chatroom/${chatName}/${current}`
   );
   return await response;
 }
 
 export async function newRoom(chatroom) {
-  const response = await axios.put(`http://mayloop.com:7887/chatroom`, {
+  const response = await axios.put(`https://chatapi.mayloop.com/chatroom`, {
     chatroom: chatroom
   });
   return await response;
@@ -16,7 +16,7 @@ export async function newRoom(chatroom) {
 
 export async function sendMessage(chatroom, username, message) {
   const response = await axios.put(
-    `http://mayloop.com:7887/chatroom/${chatroom}`,
+    `https://chatapi.mayloop.com/chatroom/${chatroom}`,
     {
       username,
       message
